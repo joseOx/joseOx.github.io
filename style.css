@@ -1,0 +1,12 @@
+const rightbtn = document.querySelector("#right");
+const leftbtn = document.querySelector("#left");
+
+const content = document.querySelector('.scroll-container');
+
+rightbtn.addEventListener("click",()=>{
+  content.scrollLeft+=300;
+});
+
+rightbtn.addEventListener("click",()=>{
+  content.scrollLeft-=300;
+});
