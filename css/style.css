@@ -130,17 +130,26 @@ footer h2,h5{
 
 .text-about-me{
     margin: 50px;
+    max-width: 700px;
 }
 
 .container-skills{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .container-skills ul{
     max-width: 350px;
+}
+
+.card-skills{
+    background: rgb(14, 105, 44);
+    border-radius: 40px;
+    box-shadow: inset;
 }
 
 .progress-bar{
