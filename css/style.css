@@ -225,3 +225,49 @@ footer h2,h5{
 .sotial-network a{
     color: white;
 }
+
+.divider{
+    background: green;
+    width: 100px;
+    height: 3px;
+}
+
+.section-img-contact{
+    max-width: 250px;
+    margin: 10px;
+}
+
+.section-img-contact img{
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.container-contact{
+    display: flex;
+}
+
+.footer-content h2,h5{
+    font-weight: 40;
+}
+
+.contact-form h4{
+    font-weight: 40;
+}
+
+.contact-form a{
+    cursor: pointer;
+    color: var(--color);
+}
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+}
