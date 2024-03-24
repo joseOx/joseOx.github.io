@@ -6,6 +6,7 @@
 	--color:white;
     --bar-color:green;
     --fill-size:0%;
+    --font-size:clamp(1rem,2.5vw,1.0rem);
 }
 ::-webkit-scrollbar{
 	display: none;
@@ -42,6 +43,9 @@ header{
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
 }
 
 
@@ -52,7 +56,7 @@ header div{
 	max-width: 100px;
 	height: auto;
 	word-wrap: break-word;
-	font-size: 12px;
+    font-size: var(--font-size);
 	color: var(--color);
 }
 
@@ -273,10 +277,4 @@ footer h2,h5{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-header{
-    position: fixed;
-    z-index: 1000;
-    right: 0;
 }
