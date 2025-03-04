@@ -282,6 +282,5 @@ footer h2,h5{
 }
 
 .contact-form > a:hover{
-	height:110%;
-	width:110%;
+	font-size:18px;
 }
