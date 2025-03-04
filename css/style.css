@@ -36,18 +36,18 @@ section{
 	"header header header"
 	"content content content"
 	;
-	animation: fondo-animado 0.8s 0.3s ease-in-out forwards;
+	animation: fondoRadial 5s infinite alternate ease-in-out;
 }
-@keyframes fondo-animado{
-	0%{
-		background:radial-gradient(circle, rgba(17,121,9,1) 0%, rgba(0,0,0,1) 100%);
-	}
-	50%{
-		background:radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(17,121,9,1) 90%, rgba(0,255,29,1) 100%);
-	}
-	100%{
-		background:radial-gradient(circle, rgba(0, 255, 29, 1) 0%, rgba(17, 121, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
-	}
+@keyframes fondoRadial {
+    0% {
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(17, 121, 9, 1) 60%, rgb(5, 136, 20) 100%);
+    }
+    50% {
+        background: radial-gradient(circle, rgba(0, 50, 0, 1) 0%, rgba(10, 90, 5, 1) 60%, rgb(0, 100, 15) 100%);
+    }
+    100% {
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(17, 121, 9, 1) 60%, rgb(5, 136, 20) 100%);
+    }
 }
 header{
 	grid-area: header;
