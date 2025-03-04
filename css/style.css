@@ -222,6 +222,12 @@ footer h2,h5{
     cursor:pointer;
 }
 
+.button-download:hover{
+    background: grey;
+    color: Black;
+   font-size:18px;
+}
+
 @keyframes fill-bar{
     to {
         transform: translate(var(--fill-size));
@@ -239,6 +245,10 @@ footer h2,h5{
 
 .sotial-network a{
     color: white;
+}
+
+.sotial-network a:hover{
+    font-size: 18px;
 }
 
 .divider{
