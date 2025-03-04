@@ -280,3 +280,8 @@ footer h2,h5{
     justify-content: center;
     align-items: center;
 }
+
+.contact-form > a:hover{
+	height:110%;
+	width:110%;
+}
