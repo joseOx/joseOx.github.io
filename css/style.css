@@ -282,7 +282,7 @@ footer h2,h5{
     width: 100%;
     height: auto;
     border-radius: 50px;
-	mask-image: linear-gradient(black 80%,transparent);
+	mask-image: linear-gradient(black 65%,transparent);
 }
 
 
