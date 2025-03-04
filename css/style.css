@@ -38,7 +38,7 @@ section{
 	;
 	animation: fondo-animado 0.8s 0.3s ease-in-out forwards;
 }
-keyframes fondo-animado{
+@keyframes fondo-animado{
 	0%{
 		background:radial-gradient(circle, rgba(17,121,9,1) 0%, rgba(0,0,0,1) 100%);
 	}
