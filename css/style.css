@@ -42,8 +42,14 @@ section{
     0% {
         background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(17, 121, 9, 1) 60%, rgb(5, 136, 20) 100%);
     }
+    25% {
+        background: radial-gradient(circle, rgba(5, 25, 5, 1) 0%, rgba(15, 110, 8, 1) 60%, rgb(4, 126, 18) 100%);
+    }
     50% {
-        background: radial-gradient(circle, rgba(0, 50, 0, 1) 0%, rgba(10, 90, 5, 1) 60%, rgb(0, 100, 15) 100%);
+        background: radial-gradient(circle, rgba(10, 50, 10, 1) 0%, rgba(13, 100, 7, 1) 60%, rgb(3, 116, 16) 100%);
+    }
+    75% {
+        background: radial-gradient(circle, rgba(5, 25, 5, 1) 0%, rgba(15, 110, 8, 1) 60%, rgb(4, 126, 18) 100%);
     }
     100% {
         background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(17, 121, 9, 1) 60%, rgb(5, 136, 20) 100%);
