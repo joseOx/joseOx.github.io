@@ -283,7 +283,7 @@ footer h2,h5{
 
 .section-img-contact img{
     width: 100%;
-    height: 60%;
+    height: 100%;
     border-radius: 50px;
 	mask-image: linear-gradient(black 65%,transparent);
 }
