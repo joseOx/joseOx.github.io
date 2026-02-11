@@ -152,6 +152,7 @@ footer h2,h5{
 .text-about-me{
     margin: 50px;
     max-width: 700px;
+	text-align: justify;
 }
 
 .container-skills{
@@ -236,6 +237,8 @@ footer h2,h5{
     border-radius: 30px;
     padding: 10px;
     cursor:pointer;
+	border: 1px solid #129f12;
+    box-shadow: 3px 3px 3px black;
 }
 
 .button-download:hover{
