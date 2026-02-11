@@ -231,6 +231,13 @@ footer h2,h5{
     animation: fill-bar 0.8s 0.3s ease-in-out forwards;
 }
 
+.container-button{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+}
+
 .button-download{
     background: green;
     color: white;
