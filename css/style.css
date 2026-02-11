@@ -74,10 +74,11 @@ header div{
 	word-wrap: break-word;
     font-size: var(--font-size);
 	color: var(--color);
+	padding:10px;
 }
 
 header div:hover{
-	width: 80px;
+	width: 120px;
 	border: 2px dashed var(--br-btn);
 }
 
