@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --bg-btn: black;
-    --br-btn: #4FC3F7;
-    --bg-section: radial-gradient(circle, #4FC3F7 0%, #0288D1 40%, #000000 100%);
-    --color: white;
-    --bar-color: #29B6F6;
+    --bg-btn: #121214;
+    --br-btn: #E6742E;
+    --bg-section: #1A1C1E;
+    --color: #F5F6FA;
+    --bar-color: #E6742E;
+    --cta-color: #E6742E;
     --fill-size: 0%;
     --font-size: clamp(1rem, 2.5vw, 1.0rem);
 }
@@ -36,10 +37,8 @@ a {
 }
 
 section {
-    background: var(--bg-section);
+    background-color: var(--bg-section);
     display: grid;
-    /* justify-content: center;
-	align-items: center; */
     width: auto;
     height: 100%;
     grid-template-columns: 1fr;
@@ -48,28 +47,25 @@ section {
         "header header header"
         "content content content"
     ;
+    position: relative;
+    overflow-x: hidden;
 }
 
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(230, 116, 46, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Minimalist Matte Background Logic */
 @keyframes fondoRadial {
-    0% {
-        background: radial-gradient(circle, #000000 0%, #0288D1 60%, #4FC3F7 100%);
-    }
-
-    25% {
-        background: radial-gradient(circle, #001F2F 0%, #0277BD 60%, #29B6F6 100%);
-    }
-
-    50% {
-        background: radial-gradient(circle, #003B5C 0%, #01579B 60%, #4FC3F7 100%);
-    }
-
-    75% {
-        background: radial-gradient(circle, #001F2F 0%, #0277BD 60%, #29B6F6 100%);
-    }
-
-    100% {
-        background: radial-gradient(circle, #000000 0%, #0288D1 60%, #4FC3F7 100%);
-    }
+    0%, 100% { background-color: #1A1C1E; }
+    50% { background-color: #121214; }
 }
 
 header {
@@ -84,8 +80,9 @@ header {
 
 
 header div {
-    background-color: var(--bg-btn);
-    border: 1px solid var(--br-btn);
+    background-color: rgba(18, 18, 20, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(230, 116, 46, 0.2);
     text-align: center;
     max-width: 100px;
     height: auto;
@@ -93,13 +90,14 @@ header div {
     font-size: var(--font-size);
     color: var(--color);
     padding: 10px;
+    transition: all 0.3s ease;
 }
 
 header div:hover {
     color: var(--br-btn);
-    border: 1px solid var(--br-btn);
-    box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
-    background: rgba(0, 0, 0, 0.8);
+    border-color: var(--br-btn);
+    box-shadow: 0 0 20px rgba(230, 116, 46, 0.15);
+    background: #121214;
 }
 
 main {
@@ -113,11 +111,13 @@ main {
 }
 
 footer {
-    background-color: #01579B;
+    background-color: #121214;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 30px 0;
+    border-top: 1px solid rgba(230, 116, 46, 0.1);
 }
 
 footer h2,
@@ -160,17 +160,17 @@ h5 {
 
 .slide-content {
     position: relative;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     height: 450px;
     transition: transform 0.4s ease;
-    background: rgba(41, 182, 246, 0.1); /* Fallback background */
+    background: #1A1C1E; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Default styling for minimalist slides with no media */
 .slide-content:not(:has(img)):not(:has(video)) {
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), rgba(2, 119, 189, 0.3));
-    border: 2px dashed rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #1A1C1E, #121214);
 }
 
 .video-mask-top {
@@ -222,21 +222,24 @@ h5 {
 
 .view-btn {
     display: inline-block;
-    padding: 10px 25px;
-    background: var(--bar-color);
+    padding: 12px 28px;
+    background: var(--cta-color);
     color: white;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    border-radius: 4px; /* More industrial sharp corners */
+    font-size: 0.85rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(230, 116, 46, 0.2);
 }
 
 .view-btn:hover {
-    background: #81D4FA;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(41, 182, 246, 0.4);
+    background: #FF8A3D; /* Slightly lighter orange */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(230, 116, 46, 0.35);
 }
 
 /* Slider Logic - 11 Slides */
@@ -340,7 +343,10 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 40px 10px;
+    font-family: "Audiowide", sans-serif;
+    font-size: 2.5rem;
+    color: var(--bar-color);
 }
 
 .container-about-me {
@@ -361,13 +367,13 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(2, 119, 189, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px 0;
-    margin: 20px 0 40px 0;
+    background: rgba(26, 28, 30, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 40px 0;
+    margin: 40px 0;
     width: 100%;
 }
 
@@ -396,8 +402,8 @@ h5 {
 }
 
 .tech-stack-icons img:hover {
-    transform: scale(1.2) translateY(-5px);
-    filter: drop-shadow(0 10px 15px rgba(41, 182, 246, 0.4));
+    transform: scale(1.15) translateY(-5px);
+    filter: drop-shadow(0 10px 20px rgba(230, 116, 46, 0.25));
 }
 
 .container-skills {
@@ -414,18 +420,20 @@ h5 {
 }
 
 .card-skills {
-    background: rgba(2, 119, 189, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    transition: transform 0.3s ease, background 0.3s ease;
+    background: rgba(26, 28, 30, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px; /* Less rounded for industrial feel */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
 }
 
 .card-skills:hover {
-    background: rgba(2, 119, 189, 0.25);
+    background: rgba(26, 28, 30, 0.9);
+    border-color: var(--br-btn);
     transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(230, 116, 46, 0.1);
 }
 
 .progress-bar {
@@ -513,19 +521,23 @@ h5 {
 }
 
 .button-download {
-    background: #29B6F6;
+    background: var(--cta-color);
     color: white;
-    border-radius: 30px;
-    padding: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 14px 30px;
     cursor: pointer;
-    border: 1px solid #0288D1;
-    box-shadow: 3px 3px 3px black;
+    border: none;
+    box-shadow: 0 4px 10px rgba(230, 116, 46, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .button-download:hover {
-    background: #81D4FA;
-    color: black;
-    font-size: 16px;
+    background: #FF8A3D;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(230, 116, 46, 0.3);
 }
 
 @keyframes fill-bar {
@@ -622,17 +634,17 @@ h5 {
 }
 
 .modal-content {
-    background: rgba(2, 87, 155, 0.2);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    background: #1A1C1E;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(230, 116, 46, 0.2);
+    border-radius: 12px;
+    padding: 45px;
+    width: 85%;
+    max-width: 650px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
     position: relative;
-    animation: modalIn 0.4s ease-out;
+    animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes modalIn {
@@ -658,9 +670,9 @@ h5 {
 .modal-content h2 {
     color: var(--bar-color);
     margin-top: 0;
-    font-size: 2rem;
-    border-bottom: 2px solid rgba(41, 182, 246, 0.3);
-    padding-bottom: 10px;
+    font-size: 2.2rem;
+    border-bottom: 2px solid rgba(230, 116, 46, 0.2);
+    padding-bottom: 12px;
 }
 
 .modal-section {
