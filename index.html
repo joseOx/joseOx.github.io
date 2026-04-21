@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,13 +20,16 @@
             <a href="#about-me">
                 <div>About me</div>
             </a>
+            <a href="#proyectos">
+                <div>Proyectos</div>
+            </a>
             <a href="#skills">
                 <div>Skills</div>
             </a>
             <a href="#contact-section">
                 <div>Contact</div>
             </a>
-            
+
         </header>
 
         <main>
@@ -43,12 +44,11 @@
                     <img src="images/fotoperfil.png" alt="fotoperfil_jose_avalos">
                 </div>
                 <div class="text-about-me">
-                    ¡Hola! Soy José Avalos, Licenciado en Análisis de Sistemas. Me gusta explorar el
-                    ambito de la tecnología y descubrir cosas nuevas.
-
-                    Dedico una parte significativa
-                    de mi tiempo a seguir aprendiendo y mejorando mis habilidades. Actualmente,
-                    me encuentro inmerso en diferentes cursos relacionados con programas y tecnologías emergentes. <br>
+                    ¡Hola! Soy <strong>José Ávalos</strong>, especialista en Análisis de Sistemas con enfoque en el desarrollo de soluciones innovadoras. 
+                    Me apasiona optimizar procesos mediante tecnología, integrando áreas como el desarrollo Full Stack y la Inteligencia Artificial.
+                    <br><br>
+                    Actualmente, dedico mi trayectoria a perfeccionar modelos de visión artificial y automatización industrial, 
+                    buscando siempre el equilibrio entre eficiencia técnica y experiencia de usuario. <br>
                     <!-- Botón para descargar el CV -->
                     <div class="container-button">
                         <a href="images/cv.pdf" download="Jose_Mathias_Avalos_Arguello_CV.pdf">
@@ -57,6 +57,18 @@
                     </div>
                 </div>
             </div>
+
+            <!-- tech stack ribbon -->
+            <div class="tech-stack-container">
+                <div class="tech-stack-title">Tech Stack</div>
+                <div class="tech-stack-icons">
+                    <img src="https://skillicons.dev/icons?i=python,js,html,css&theme=dark" alt="Languages">
+                    <img src="https://skillicons.dev/icons?i=django,fastapi,laravel&theme=dark" alt="Frameworks">
+                    <img src="https://skillicons.dev/icons?i=mysql,postgres,sqlite,oracle&theme=dark" alt="Databases">
+                    <img src="https://skillicons.dev/icons?i=git,github,vscode,py&theme=dark" alt="Tools">
+                </div>
+            </div>
+
             <!-- habilidades -->
             <div id="skills" class="container-skills">
                 <!-- lenguajes -->
@@ -77,11 +89,13 @@
                         </li>
                         <li>framework: Django <div class="progress-bar"></div>
                         </li>
-                        <li>framework: Laravel <div class="progress-bar-50">
+                        <li>framework: Laravel <div class="progress-bar-50"></div>
+                        </li>
+                        <li>framework: FastAPI <div class="progress-bar-80"></div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <!-- base de datos -->
                 <div class="card-skills">
                     <ul>
@@ -94,7 +108,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <!-- metodologias y otros-->
                 <div class="card-skills">
                     <ul>
@@ -102,15 +116,15 @@
                         <li>
                             Patrón de Diseño MVC (modelo-vista-controlador)<div class="progress-bar"></div>
                         </li>
-    
+
                         <li>
                             Metodologías ágiles(scrum, scrumban, kanban)<div class="progress-bar"></div>
                         </li>
-    
+
                         <li>
                             Git, github, gitlab<div class="progress-bar"></div>
                         </li>
-    
+
                         <li>
                             IA: desarrollo de modelos entrenados con yolov8 para deteccion de objetos
                             <div class="progress-bar-60"></div>
@@ -120,44 +134,420 @@
                         </li>
                     </ul>
                 </div>
-                
+
 
 
             </div>
             <!-- proyectos -->
-            <!-- <div class="container-portfolio">
+            <div id="proyectos" class="container-portfolio">
                 <div class="text-container-portfolio">Proyectos realizados</div>
-            </div> -->
-            <!-- Slider main container -->
-            <!-- <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://mister.com.py/uploads/2021/06/mac_que_es_una_landing_page_o_pagina_de_aterrizaje_1544133467.png"
-                            alt="landing_page">
+            </div>
+            <!-- Slider main container (Pure CSS) -->
+            <div class="slider-container">
+                <input type="radio" name="project-slider" id="s1" checked>
+                <input type="radio" name="project-slider" id="s2">
+                <input type="radio" name="project-slider" id="s3">
+                <input type="radio" name="project-slider" id="s4">
+                <input type="radio" name="project-slider" id="s5">
+                <input type="radio" name="project-slider" id="s6">
+                <input type="radio" name="project-slider" id="s7">
+                <input type="radio" name="project-slider" id="s8">
+                <input type="radio" name="project-slider" id="s9">
+                <input type="radio" name="project-slider" id="s10">
+                <input type="radio" name="project-slider" id="s11">
+                
+                <div class="slider-items">
+                    <!-- 1. Presupuesto Web -->
+                    <div class="slide" id="slide-1">
+                        <div class="slide-content">
+                            <div class="video-mask-top"></div>
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/presupuestos.mp4" type="video/mp4">
+                            </video>
+                            <div class="slide-info">
+                                <h3>Presupuesto Web</h3>
+                                <p>Gestión de pagos de clientes y presupuestos.</p>
+                                <a href="#modal-1" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://mister.com.py/uploads/2021/06/mac_que_es_una_landing_page_o_pagina_de_aterrizaje_1544133467.png"
-                            alt="landing_page">
+                    <!-- 2. Totem App -->
+                    <div class="slide" id="slide-2">
+                        <div class="slide-content">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/totem.mp4" type="video/mp4">
+                            </video>
+                            <div class="slide-info">
+                                <h3>Totem App</h3>
+                                <p>Inducción y acceso automatizado vía Biostar.</p>
+                                <a href="#modal-2" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://mister.com.py/uploads/2021/06/mac_que_es_una_landing_page_o_pagina_de_aterrizaje_1544133467.png"
-                            alt="landing_page">
+                    <!-- 3. Dashboard 1 -->
+                    <div class="slide" id="slide-3">
+                        <div class="slide-content">
+                            <img src="images/dashboards/Screenshot 2026-04-21 101850.png" alt="Dashboard 1">
+                            <div class="slide-info">
+                                <h3>Dashboard Analytics</h3>
+                                <p>Visualización de datos y métricas en tiempo real.</p>
+                                <a href="#modal-3" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
                     </div>
-                    ...
+                    <!-- 4. Dashboard 2 -->
+                    <div class="slide" id="slide-4">
+                        <div class="slide-content">
+                            <img src="images/dashboards/Screenshot 2026-03-31 160323.png" alt="Dashboard 2">
+                            <div class="slide-info">
+                                <h3>Dashboard Control</h3>
+                                <p>Gestión y monitoreo de procesos industriales.</p>
+                                <a href="#modal-4" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5. Dashboard 3 -->
+                    <div class="slide" id="slide-5">
+                        <div class="slide-content">
+                            <img src="images/dashboards/Screenshot 2026-02-06 113925.png" alt="Dashboard 3">
+                            <div class="slide-info">
+                                <h3>Dashboard Reportes</h3>
+                                <p>Generación de reportes dinámicos y estadísticos.</p>
+                                <a href="#modal-5" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6. Dashboard 4 -->
+                    <div class="slide" id="slide-6">
+                        <div class="slide-content">
+                            <img src="images/dashboards/Screenshot 2026-01-28 102851.png" alt="Dashboard 4">
+                            <div class="slide-info">
+                                <h3>Dashboard Interactivo</h3>
+                                <p>Panel interactivo para análisis de comportamiento.</p>
+                                <a href="#modal-6" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7. Vacío 1 -->
+                    <div class="slide" id="slide-7">
+                        <div class="slide-content">
+                            <img src="images/vacio/deteccionVacio.png" alt="Detección Vacío 1">
+                            <div class="slide-info">
+                                <h3>Detección de Vacíos</h3>
+                                <p>IA para detección de espacios libres en almacenes.</p>
+                                <a href="#modal-7" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8. Vacío 2 -->
+                    <div class="slide" id="slide-8">
+                        <div class="slide-content">
+                            <img src="images/vacio/deteccionVacio2.png" alt="Detección Vacío 2">
+                            <div class="slide-info">
+                                <h3>Análisis de Espacios</h3>
+                                <p>Monitoreo inteligente de disponibilidad de zonas.</p>
+                                <a href="#modal-8" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9. Vacío 3 -->
+                    <div class="slide" id="slide-9">
+                        <div class="slide-content">
+                            <img src="images/vacio/Screenshot 2026-01-21 101101.png" alt="Detección Vacío 3">
+                            <div class="slide-info">
+                                <h3>Visión Artificial</h3>
+                                <p>Optimización logística mediante detección de vacíos.</p>
+                                <a href="#modal-9" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10. FastAPI Project -->
+                    <div class="slide" id="slide-10">
+                        <div class="slide-content">
+                            <img src="images/fastapi/Screenshot 2026-04-21 122328.png" alt="FastAPI Project">
+                            <div class="slide-info">
+                                <h3>FastAPI Task Manager</h3>
+                                <p>API robusta para gestión de tareas y usuarios.</p>
+                                <a href="#modal-10" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11. Botellas (Minimalist) -->
+                    <div class="slide" id="slide-11">
+                        <div class="slide-content">
+                            <div class="slide-info">
+                                <h3>Botellas</h3>
+                                <p>Contador de botellas por niveles.</p>
+                                <a href="#modal-11" class="view-btn">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="slider-nav">
+                    <label for="s1" class="nav-dot" id="dot1"></label>
+                    <label for="s2" class="nav-dot" id="dot2"></label>
+                    <label for="s3" class="nav-dot" id="dot3"></label>
+                    <label for="s4" class="nav-dot" id="dot4"></label>
+                    <label for="s5" class="nav-dot" id="dot5"></label>
+                    <label for="s6" class="nav-dot" id="dot6"></label>
+                    <label for="s7" class="nav-dot" id="dot7"></label>
+                    <label for="s8" class="nav-dot" id="dot8"></label>
+                    <label for="s9" class="nav-dot" id="dot9"></label>
+                    <label for="s10" class="nav-dot" id="dot10"></label>
+                    <label for="s11" class="nav-dot" id="dot11"></label>
+                </div>
+            </div>
 
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
-            </div> -->
+            <!-- Modals Structure (Pure CSS) -->
+            <!-- Modal 1: Presupuesto Web -->
+            <div id="modal-1" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Presupuesto Web</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Sistema avanzado de facturación y control de pagos. Permite el seguimiento de saldos, pagos excedidos y cuotas pendientes con una interfaz intuitiva.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Python, JS, SQLite, Django, CSS</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Optimización del flujo de caja corporativo mediante automatización de recordatorios y control de saldos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 2: Totem App -->
+            <div id="modal-2" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Totem App</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Aplicación para tótems de inducción. Se implementó utilizando Vite.js con backend en Django para asegurar la compatibilidad con dispositivos Android antiguos y evitar conflictos de dependencias.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Vite.js, Django, BioStar API</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Reducción del tiempo de espera en accesos industriales y automatización de la seguridad perimetral en dispositivos legados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 3: Dashboard Analytics -->
+            <div id="modal-3" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Dashboard Analytics</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Panel interactivo para el monitoreo de indicadores clave de rendimiento (KPIs) empresariales.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Chart.js, D3.js, Custom CSS/JS Graphics</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Mejora en la toma de decisiones basada en datos reales y predicciones de tendencias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 4: Dashboard Control -->
+            <div id="modal-4" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Dashboard Control</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Sistema de control centralizado para la supervisión de líneas de producción y eficiencia operativa.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Chart.js, D3.js, Custom CSS/JS Graphics</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Visibilidad total del estado de la planta y detección temprana de cuellos de botella.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 5: Dashboard Reportes -->
+            <div id="modal-5" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Dashboard Reportes</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Módulo de generación automatizada de reportes corporativos con filtros dinámicos.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Chart.js, D3.js, Custom CSS/JS Graphics</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Ahorro de horas hombre en la preparación manual de informes estadísticos mensuales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 6: Dashboard Interactivo -->
+            <div id="modal-6" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Dashboard Interactivo</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Interfaz de usuario avanzada para el análisis profundo de patrones de usuario y tráfico.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Chart.js, D3.js, Custom CSS/JS Graphics</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Identificación de oportunidades de mejora en la experiencia del cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 7: Detección de Vacíos -->
+            <div id="modal-7" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Detección de Vacíos</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Solución de visión artificial que identifica zonas disponibles en tiempo real para optimización de stock.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>Computer Vision, YOLOv8, Python</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Aumento de la eficiencia logística en un 15% mediante gestión inteligente de espacios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 8: Análisis de Espacios -->
+            <div id="modal-8" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Análisis de Espacios</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Sistema de monitoreo continuo de áreas restringidas y ocupación de zonas de carga.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>IA, Security Vision, Python</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Mejora en la seguridad operativa y fluidez del tráfico interno en depósitos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 9: Visión Artificial -->
+            <div id="modal-9" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Visión Artificial</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Modelo de aprendizaje profundo entrenado para el reconocimiento de patrones de ocupación.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>TensorFlow, OpenCV, Python</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Precisión superior en la detección de objetos y espacios bajo diferentes condiciones lumínicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 10: FastAPI Task Manager -->
+            <div id="modal-10" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>FastAPI Task Manager</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Desarrollo de una API RESTful para la gestión eficiente de tareas. Incluye autenticación, validación de esquemas y persistencia de datos.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>FastAPI, Pydantic, SQLAlchemy</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Implementación de una arquitectura limpia y escalable con documentación interactiva automática (Swagger/Redoc).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 11: Contador de Botellas -->
+            <div id="modal-11" class="modal">
+                <div class="modal-content">
+                    <a href="#proyectos" class="close-modal">&times;</a>
+                    <h2>Contador de Botellas</h2>
+                    <div class="modal-body">
+                        <div class="modal-section">
+                            <h4><i class="fas fa-info-circle"></i> Descripción</h4>
+                            <p>Sistema industrial de visión para el conteo y clasificación de botellas según su nivel de llenado.</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-code"></i> Tecnologías</h4>
+                            <p>YOLOv8, Industrial Automation, Python</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4><i class="fas fa-chart-line"></i> Impacto / Resultado</h4>
+                            <p>Eliminación de errores manuales de conteo y control de calidad automatizado en la línea de producción.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- contact -->
             <div id="contact-section" class="contact-section">
                 <div class="container-contact">
                     <div class="section-img-contact">
                         <img src="images/fotoperfil2.png" alt="picture jose avalos">
                     </div>
-                    
+
                     <div class="contact-form">
                         <div class="contact-headings">
                             Contact
@@ -166,7 +556,7 @@
                         <h4>Send me a message...</h4>
                         <a href="https://wa.me/595984538947">
                             <h4>
-                                <i style="color: green;" class="fa-brands fa-whatsapp"></i> 
+                                <i style="color: green;" class="fa-brands fa-whatsapp"></i>
                                 Whatsapp: +595 984 538 947
                             </h4>
                         </a>
@@ -194,36 +584,17 @@
     </footer>
     <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#typed', {
-            strings: ['Hola', 'mi nombre es Jose Avalos', 'Soy Licenciado en analisis de sistemas', 'En esta pagina encontraras informacion referente a mi :)'],
+            strings: [
+                'Desarrollador Full Stack & IA Specialist', 
+                'Optimizando procesos mediante visión artificial', 
+                'Creando soluciones escalables con Python y Java', 
+                'Transformando datos en resultados estratégicos'
+            ],
             typeSpeed: 50,
             loop: true,
-        });
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
         });
     </script>
 
